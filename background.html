@@ -1,0 +1,377 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Foundation</title>
+		<link rel="stylesheet" href="stylesheets/app.css" />
+		<script src="bower_components/modernizr/modernizr.js"></script>
+	</head>
+	<body>
+
+		<!-- topbar -->
+		<div class="fixed">
+			<nav class="top-bar" data-topbar role="navigation">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="index.html">Biocentric Game</a></h1>
+					</li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon">
+						<a href="#"><span>Menu</span></a>
+					</li>
+				</ul>
+
+				<section class="top-bar-section">
+					<!-- Right Nav Section -->
+					<ul class="right">
+						<li>
+							<a href="game.html">Game</a>
+						</li>
+						<li>
+							<a href="entanglement.html">Entanglement</a>
+						</li>
+						<li class="active">
+							<a href="#">Background</a>
+						</li>
+						<li>
+							<a href="FAQ.html">FAQ</a>
+						</li>
+
+					</ul>
+				</section>
+			</nav>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>The Concept</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<p>
+					Biocentric Game reports measurements of the effects of the interaction among Consciousness and physical processes,
+					and utilise this process as a precise instrument to rapidly and accurately feed back information to the user.
+					The simulation is rich of archetypes inspired by the traditions of the videogames, the links driving the player towards
+					influencing the target are already put in place since the beginning, they are the foundation of the process.
+					In our intentions, the consciousness of the user (if he has experience with videogames) can't avoid to provide the effect.
+				</p>
+				<hr>
+				<h2>The Design</h2>
+				<p>
+					At the high level, the flow of the application is the following:
+					<ol>
+						<li>
+							Let the user select the level of difficulty and start the game by configuring the parameters of the simulation.
+							The two main parameters are called 'Frequency' (it is related to the statistical significance) and 'Amplitude' (it is related to the statistical effect size).
+						</li>
+						<li>
+							Start the simulation and acquire (in continuos) the random data from the RNG (remote or local).
+							The largest quantity of tests have been produced, until now, by using the ANU QRNG.
+						</li>
+						<li>
+							Cache the data in a queue in time order in respect of the requesting time.
+						</li>
+						<li>
+							Extract, from the queue, a sequence of random data using a criteria of an 'observation window'.
+							For example, the bits that arrived not more later than 4 secs. ago, but not earlier than 2 secs. ago (these are additional configurable parameters).
+						</li>
+						<li>
+							Perform a statistical analysis on the sequence to determine its actual randomness (its p-value).
+							The statistical test suite of the NIST (http://goo.gl/iOEqeZ) has been incorporated inside the code.
+						</li>
+						<li>
+							Create an array containing this sequence together with all the other sequences previously arrived, and perform a meta-analysis on the array,
+							measuring the statistical significance and the effect-size.
+						</li>
+						<li>
+							Perform a correlation with the values of the analysis and the game engine, wherein positive values (in respect to the configured 'Frequency'
+							and 'Amplitude') produce advantages to the gameplay meanwhile, on the contrary, the negative values provide detriment.
+						</li>
+						<li>
+							Provide feedback to the user of both the statistical analysis and the meta-analysis.
+						</li>
+						<li>
+							Update the simulation until it reaches a final condition of either win or lose.
+						</li>
+					</ol>
+				</p>
+			</div>
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Scientific Researches</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<p>
+					Investigations of mind-matter interaction, using controlled methods in laboratories by qualified scientists, have reached todays a significant volume.
+					Targets of these studies can be both 'Micro-PK' (microscopic dimension) and 'Macro-PK' targets (visible to a naked eye).</br>
+					One example of a scientific publication related to the 'Micro-PK' field of investigation was originated by neuroscientist Lawrence Farwell and physicist George Farwell,
+					their study reports (pages 956-957):
+					<blockquote>
+						“We investigated the possible effect of human consciousness and intention on a quantum-mechanical process. The experimental apparatus consisted of a small
+						natural alpha-particle source, a solid-state particle detector, amplifiers, a single-channel analyser and pulse shaper, an oscilloscope, and a computer
+						with digitiser board.</br>
+						Count rates of about 1 kHz were observed, and the intervals (in [microseconds]) between successive alpha-decay events were sensed and recorded.
+						Without outside influence, one predicts 50% even and 50% odd time intervals for successive particle detections. </br>
+						Acting over a succession of 10-[second] intervals randomly assigned to the 3 below conditions, the 23 experiments, all experienced in achieving advanced state
+						of consciousness, attempted to influence the decay process so as to yield </br>
+						(1) an excess of intervals of an even number of [microseconds] (“even events”);</br>
+						(2) an excess of “odds events”; or (3) either (control condition). </br>
+						In 11,721,660 events in the “even” and “odd” conditions, we observed a total excess of 12,176 in the intended direction (i.e. “even” where intended and “odd” where intended),
+						[associated with odds against chance of 5,000 to 1]. (In the control condition the number of “even” and “odd” events were statistically indistinguishable).”</br>
+						<cite> Farwell, Lawrence A.; Farwell, George W. (April 1995), "Quantum-Mechanical Processes and Consciousness", Bulletin of the American Physical Society 40 (2): 956–957. </cite>
+					</blockquote>
+				</p>
+				<p>
+					Many hundreds of similar experiments have been developed over the past half century, involving random number generator devices (RNGs).
+					RNGs may be defined as follows:
+					<blockquote>
+						"A random number generator (RNG) is a computational or physical device designed to generate a sequence of numbers or symbols that lack any pattern, i.e. appear random.</br>
+						…
+						A physical random number generator can be based on an essentially random atomic or subatomic physical phenomenon whose unpredictability can be traced
+						to the laws of quantum mechanics. Sources of entropy include radioactive decay, thermal noise, shot noise, avalanche noise in Zener diodes,
+						clock drift, the timing of actual movements of a hard disk read/write head, and radio noise. However, physical phenomena and tools used to measure
+						them generally feature asymmetries and systematic biases that make their outcomes not uniformly random.
+						A randomness extractor, such as a cryptographic hash function, can be used to approach a uniform distribution of bits from a non-uniformly random source,
+						though at a lower bit rate.”
+						<cite> (source http://en.wikipedia.org/wiki/Random_number_generation) </cite>
+					</blockquote>
+				</p>
+				<p>
+					These sort of experiments are conducted by asking the participants to influence the generation of sequences of random bits sourced by RNGs,
+					wherein the influence can be measured by statistical analysis of the effective randomness of the sequences.</br>
+					Several meta-analysis summarising the combined results are available, and the matter is highly debated among researchers.
+					For example a recent meta-analysis by Hoger Bösch (and others), published in 2006 in the journal "Psychological Bulletin" is reporting that:
+					<blockquote>
+						"Seance-room and other large-scale psychokinetic phenomena have fascinated humankind for decades.
+						Experimental research has reduced these phenomena to attempts to influence (a) the fall of dice and, later, (b) the output of random number generators (RNGs).</br>
+						The meta-analysis combined 380 studies that assessed whether RNG output correlated with human intention and found a significant but very small overall effect size.
+						The study effect sizes were strongly and inversely related to sample size and were extremely heterogeneous. </br>
+						A Monte Carlo simulation revealed that the small effect size, the relation between sample size and effect size, and the extreme effect size heterogeneity
+						found could in principle be a result of publication bias."
+						<cite> "Examining Psychokinesis:
+							The Interaction of Human Intention with Random Number Generators--A Meta-Analysis" (Psychological Bulletin, v132 n4 p497-523 Jul 2006)</cite>
+					</blockquote>
+				</p>
+				<p>
+					This study has been successively re-examined by another one, also published in the Psychological Bulletin, authored by Radin D, Nelson R, Dobyns Y, Houtkooper J.
+					The title of the study is "Reexamining psychokinesis: comment on Bösch, Steinkamp, and Boller (2006)",
+					and the abstract reports:
+					<blockquote>
+						"H. Bösch, F. Steinkamp, and E. Boller's review of the evidence for psychokinesis confirms many of the authors' earlier findings.
+						The authors agree with Bösch et al. that existing studies provide statistical evidence for psychokinesis, that the evidence is generally of high methodological quality,
+						and that effect sizes are distributed heterogeneously.
+						Bösch et al. postulated the heterogeneity is attributable to selective reporting and thus that psychokinesis is "not proven."
+						However, Bösch et al. assumed that effect size is entirely independent of sample size. For these experiments, this assumption is incorrect; it also guarantees heterogeneity.
+						The authors maintain that selective reporting is an implausible explanation for the observed data and hence that these studies provide evidence for a genuine psychokinetic effect.
+						"
+						<cite> Psychol Bull. 2006 Jul;132(4):529-32; discussion 533-7 - Copyright (c) 2006 APA, all rights reserved. </cite>
+					</blockquote>
+				</p>
+				<p>
+					Moreover Radin D. emphasises in his recent book "Supernormal", the importance of practicing the intention-focusing, and also the importance of
+					giving to the participants a feedback (i.e. a meaningful bonus) of the outcomes of the results.</br>
+					Here is a report of the aforementioned study by Radin D et al. :
+					<blockquote>
+						“[Imagine] that we conduct a study involving 1,000 experienced meditators, each of whom is selected on the basis of his or her performance on a previous,
+						similar [psychokinesis] task. Each participant is asked by a cordial, enthusiastic investigator to engage in a daily intention-focusing practice
+						for 4 weeks in preparation for the experiment, in which he or she will be asked to intentionally influence the generation of a single random bit. </br>
+						Participants are told that the outcome of that random decision will determine the outcome of a meaningful bonus, such as winning a scholarship. </br>
+						Now consider a second study in which a bored student investigator indifferently recruits an arbitrarily selected college sophomore,
+						who is asked to mentally influence 1,000 random bits generated in a millisecond, with no feedback of the results an no consequences regardless of the outcome.</br>
+						The physical context of these two studies may be identical, using the same [random number generator] and statistics to evaluate the resulting data sets,
+						each of which consists of a total of 1,000 randomly generated bits. </br>
+						But it is clear that the psychological contexts differ radically. If we presume that the only important factor in this type of experiment is
+						the number of bits generated, then the two studies should provide about the same results. </br>
+						But if a significant variable is the amount of time or effort one can apply in focusing mental intention toward each random event,
+						then the former study might result in an effect size orders of magnitude larger that the latter. (p. 529).”
+						<cite> Dean Radin "Supernormal" (ISBN-10: 030798690X) </cite>
+					</blockquote>
+				</p>
+			</div>
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>The Feedback</h1>
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns">
+					<p>
+						The concept of 'feedback' is at the core of Biocentric Game, in a similar sense to neurobiofeedback or biofeedback.
+						Biofeedback may be defined as follows:
+						<blockquote>
+							"Biofeedback is the process of gaining greater awareness of many physiological functions primarily using instruments that provide information on
+							the activity of those same systems, with a goal of being able to manipulate them at will.
+							Some of the processes that can be controlled include brainwaves, muscle tone, skin conductance, heart rate and pain perception.
+							Biofeedback may be used to improve health, performance, and the physiological changes that often occur in conjunction with changes
+							to thoughts, emotions, and behaviour.
+							Eventually, these changes may be maintained without the use of extra equipment, even though no equipment is necessarily required to practice biofeedback.
+							…
+							Claude Bernard proposed in 1865 that the body strives to maintain a steady state in the internal environment (milieu intérieur), introducing the concept of homeostasis.
+							In 1885, J.R. Tarchanoff showed that voluntary control of heart rate could be fairly direct (cortical-autonomic) and did not depend on "cheating"
+							by altering breathing rate. In 1901, J. H. Bair studied voluntary control of the retrahens aurem muscle that wiggles the ear, discovering that subjects
+							learned this skill by inhibiting interfering muscles and demonstrating that skeletal muscles are self-regulated. Alexander Graham Bell attempted
+							to teach the deaf to speak through the use of two devices — the phonautograph, created by Édouard-Léon Scott’s, and a manometric flame.
+							The former translated sound vibrations into tracings on smoked glass to show their acoustic waveforms, while the latter allowed sound
+							to be displayed as patterns of light. After World War II, mathematician Norbert Wiener developed cybernetic theory, that proposed that systems
+							are controlled by monitoring their results. The participants at the landmark 1969 conference at the Surfrider Inn in Santa Monica coined the term biofeedback
+							from Wiener's feedback. The conference resulted in the founding of the Bio-Feedback Research Society, which permitted normally isolated researchers to
+							contact and collaborate with each other, as well as popularising the term “biofeedback.”
+							The work of B.F. Skinner led researchers to apply operant conditioning to biofeedback, decide which responses could be voluntarily controlled and which could not.
+							The effects of the perception of autonomic nervous system activity was initially explored by George Mandler's group in 1958.
+							In 1965, Maia Lisina combined classical and operant conditioning to train subjects to change blood vessel diameter, eliciting and displaying reflexive
+							blood flow changes to teach subjects how to voluntarily control the temperature of their skin. In 1974, H.D. Kimmel trained subjects to sweat using
+							the galvanic skin response.”
+							<cite> source: http://en.wikipedia.org/wiki/Biofeedback </cite>
+						</blockquote>
+					</p>
+					<p>
+						It could be also relevant to note that (same source cited above):
+						<blockquote>
+							"Biofeedback systems have been known in India and some other countries for millennia.
+							Ancient Hindu practices like Yoga and Pranayama (Breathing techniques)are essentially biofeedback methods.
+							Many yogis and sadhus have been known to exercise control over their physiological processes.
+							In addition to recent research on Yoga, Paul Brunton, the British writer who travelled extensively in India, has written about many cases he has witnessed.”
+							<cite> source: http://en.wikipedia.org/wiki/Biofeedback </cite>
+						</blockquote>
+					</p>
+					<hr>
+					<h2>Neurofeedback</h2>
+					<p>
+						A definition of neurofeedback (or neurobiofeedback) is as follows:
+						<blockquote>
+							“Neurofeedback is a type of biofeedback that measures brain waves to produce a signal that can be used as feedback on brain activity to teach self-regulation.
+							Neurofeedback is commonly provided using video or sound, with positive feedback for desired brain activity and negative feedback for brain activity that is undesirable.
+							Some feel that the most accurate form of neurofeedback is the one guided by qEEG, that is usually used in clinical settings.
+							But this approach, although being helpful, is being seen by many as more using a linear science that is not in tune with modern, non-linear physics.”
+							<cite> (source http://en.wikipedia.org/wiki/Neurofeedback) </cite>
+						</blockquote>
+					</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Evalutating the Randomness</h1>
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns">
+					<p>
+						In Biocentric Game the methods for evaluating the randomness are directly inspired by the National Institute for Standards and Technologies (NIST),
+						In the publication the randomness is described as follows:
+						<blockquote>
+							"A random bit sequence could be interpreted as the result of the flips of an unbiased “fair” coin with sides that are labeled “0” and “1,” with each flip
+							having a probability of exactly 1⁄2 of producing a “0” or “1.” Furthermore, the flips are independent of each other: the result of any previous coin
+							flip does not affect future coin flips. The unbiased “fair” coin is thus the perfect random bit stream generator, since the “0” and “1” values will be
+							randomly distributed (and [0,1] uniformly distributed). All elements of the sequence are generated independently of each other, and the value of the next
+							element in the sequence cannot be predicted, regardless of how many elements have already been produced.
+							Obviously, the use of unbiased coins for cryptographic purposes is impractical. Nonetheless, the hypothetical output of such an idealised generator
+							of a true random sequence serves as a benchmark for the evaluation of random and pseudorandom number generators."
+							<cite> Special Publication 800-22:
+								“A Statistical Test Suite for Random and Pseudorandom Number Generators for Cryptographic Applications
+								(see http://csrc.nist.gov/groups/ST/toolkit/rng/index.html).” </cite>
+						</blockquote>
+					</p>
+					<p>
+						The NIST also makes available the source code of the algorithms described in the publication, and it has been incorporated in Biocentric Game.
+						This code is available at the following link:
+						‘http://csrc.nist.gov/groups/ST/toolkit/rng/documentation_software.html'.
+						The tests performed on the sequence are:
+						<h3 class="subheader">Frequency (Monobit) Test</h3>
+						<blockquote>
+							“The focus of the test is the proportion of zeroes and ones for the entire sequence.
+							The purpose of this test is to determine whether the number of ones and zeros in a sequence are approximately the same as would be expected
+							for a truly random sequence.
+							The test assesses the closeness of the fraction of ones to 1⁄∕2, that is, the number of ones and zeroes in a sequence should be about the same.
+							All subsequent tests depend on the passing of this test.”
+						</blockquote>
+						<h3 class="subheader">Frequency Test within a Block</h3>
+						<blockquote>
+							“The focus of the test is the proportion of ones within M-bit blocks. The purpose of this test is to determine whether the frequency of ones in an M-bit block
+							is approximately M/2, as would be expected under an assumption of randomness.
+							For block size M=1, this test degenerates to test 1, the Frequency (Monobit) test.”
+						</blockquote>
+						<h3 class="subheader">Runs Test</h3>
+						<blockquote>
+							“The focus of this test is the total number of runs in the sequence, where a run is an uninterrupted sequence of identical bits.
+							A run of length k consists of exactly k identical bits and is bounded before and after with a bit of the opposite value.
+							The purpose of the runs test is to determine whether the number of runs of ones and zeros of various lengths is as expected for a random sequence.
+							In particular, this test determines whether the oscillation between such zeros and ones is too fast or too slow.”
+						</blockquote>
+						<h3 class="subheader">Test for the Longest Run of Ones in a Block</h3>
+						<blockquote>
+							“The focus of the test is the longest run of ones within M-bit blocks.
+							The purpose of this test is to determine whether the length of the longest run of ones within the tested sequence is consistent with the length
+							of the longest run of ones that would be expected in a random sequence.
+							Note that an irregularity in the expected length of the longest run of ones implies that there is also an irregularity
+							in the expected length of the longest run of zeroes. Therefore, only a test for ones is necessary.”
+						</blockquote>
+						<h3 class="subheader">Approximate Entropy Test</h3>
+						<blockquote>
+							“... the focus of this test is the frequency of all possible overlapping m-bit patterns across the entire sequence.
+							The purpose of the test is to compare the frequency of overlapping blocks of two consecutive/adjacent lengths (m and m+1)
+							against the expected result for a random sequence.”
+						</blockquote>
+						<h3 class="subheader">Cumulative Sums (Cusum) Test</h3>
+						<blockquote>
+							“The focus of this test is the maximal excursion (from zero) of the random walk defined by the cumulative sum of adjusted (-1, +1) digits in the sequence.
+							The purpose of the test is to determine whether the cumulative sum of the partial sequences occurring in the tested sequence is too large or
+							too small relative to the expected behavior of that cumulative sum for random sequences.
+							This cumulative sum may be considered as a random walk. For a random sequence, the excursions of the random walk should be near zero.
+							For certain types of non-random sequences, the excursions of this random walk from zero will be large.”
+						</blockquote>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row closing-footer fw">
+			<p></p>
+			<div class="row">
+				<div class="large-3 columns text-center">
+					<p></p>
+					<p>
+						<a href="index.html">Home</br></a>
+						<a href="FAQ.html">FAQ</br></a>
+						<a href="credits.html">Credits</br></a>
+					</p>
+				</div>
+				<div class="large-6 columns text-center">
+					<p></p>
+					<p>
+						Biocentric Game is distributed by Ensoftwarment LTD.</br>
+						Copyright © 2014 Antonio Rossi.</br> All Rights Reserved.</br>
+						Patent Pending US 62011595
+					</p>
+				</div>
+				<div class="large-3 columns text-center">
+					<div class="row">
+						<p></p>
+						<p></p>
+						<a href="https://www.facebook.com/BiocentricGame"> <img src="img/icons/facebook44-60-60.png" > </a>
+						<img src="img/icons/twitter37-60-60.png" >
+						<a href="mailto:biocentricgame@gmail.com"> <img src="img/icons/arroba1-60-60.png" > </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/foundation/js/foundation.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
