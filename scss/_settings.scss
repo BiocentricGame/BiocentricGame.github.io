@@ -191,6 +191,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
+$header-font-family: 'Raleway', sans-serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
@@ -228,6 +229,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
+$paragraph-font-family: 'Lora', serif;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
@@ -1371,6 +1373,7 @@ $topbar-bg: $topbar-bg-color;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
+$topbar-dropdown-bg: blue;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-bg: $oil;
 // $topbar-dropdown-link-weight: $font-weight-normal;

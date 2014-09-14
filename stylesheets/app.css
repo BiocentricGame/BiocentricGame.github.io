@@ -6553,7 +6553,7 @@ a img {
 /* Default paragraph styles */
 /* line 234, ../bower_components/foundation/scss/foundation/components/_type.scss */
 p {
-  font-family: inherit;
+  font-family: "Lora", serif;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.6;
@@ -6575,7 +6575,7 @@ p aside {
 /* Default header styles */
 /* line 252, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #222222;
@@ -6681,7 +6681,7 @@ dl {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: inherit;
+  font-family: "Lora", serif;
 }
 
 /* line 326, ../bower_components/foundation/scss/foundation/components/_type.scss */
@@ -7429,7 +7429,7 @@ meta.foundation-mq-topbar {
 }
 /* line 301, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li {
-  background: #333333;
+  background: blue;
 }
 /* line 303, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a {
