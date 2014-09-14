@@ -2336,14 +2336,14 @@ button, .button {
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
   font-size: 1rem;
-  background-color: orange;
-  border-color: #cc8400;
+  background-color: #ED8906;
+  border-color: #be6e05;
   color: #FFFFFF;
   transition: background-color 300ms ease-out;
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #cc8400;
+  background-color: #be6e05;
 }
 /* line 167, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -2469,8 +2469,8 @@ button.round, .button.round {
 }
 /* line 241, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: orange;
-  border-color: #cc8400;
+  background-color: #ED8906;
+  border-color: #be6e05;
   color: #FFFFFF;
   cursor: default;
   opacity: 0.7;
@@ -2478,7 +2478,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #cc8400;
+  background-color: #be6e05;
 }
 /* line 167, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -2486,7 +2486,7 @@ button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[dis
 }
 /* line 178, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: orange;
+  background-color: #ED8906;
 }
 /* line 242, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -7564,7 +7564,7 @@ meta.foundation-mq-topbar {
 /* line 338, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li:hover:not(.has-form) > a {
   background-color: #555555;
-  background: orange;
+  background: #ED8906;
   color: #FFFFFF;
 }
 /* line 348, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -7754,7 +7754,7 @@ meta.foundation-mq-topbar {
   /* line 486, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li.hover > a:not(.button) {
     background-color: #555555;
-    background: orange;
+    background: #ED8906;
     color: #FFFFFF;
   }
   /* line 495, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -7766,7 +7766,7 @@ meta.foundation-mq-topbar {
   /* line 499, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li:not(.has-form) a:not(.button):hover {
     background-color: #555555;
-    background: orange;
+    background: #ED8906;
   }
   /* line 508, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -7862,7 +7862,7 @@ meta.foundation-mq-topbar {
   .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
     color: #FFFFFF;
     background-color: #555555;
-    background: orange;
+    background: #ED8906;
   }
   /* line 596, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li label {
@@ -7911,7 +7911,7 @@ meta.foundation-mq-topbar {
   /* line 649, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .no-js .top-bar-section ul li:hover > a {
     background-color: #555555;
-    background: orange;
+    background: #ED8906;
     color: #FFFFFF;
   }
   /* line 658, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -9015,12 +9015,43 @@ th.hide-for-touch {
 }
 
 /* line 52, ../scss/app.scss */
-.closing-footer div {
-  height: 90px;
-  background: orange;
+.opening-panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d37a05;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #ED8906;
+}
+/* line 52, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.opening-panel > :first-child {
+  margin-top: 0;
+}
+/* line 53, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.opening-panel > :last-child {
+  margin-bottom: 0;
+}
+/* line 61, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.opening-panel h1, .opening-panel h2, .opening-panel h3, .opening-panel h4, .opening-panel h5, .opening-panel h6, .opening-panel p, .opening-panel li, .opening-panel dl {
+  color: #FFFFFF;
+}
+/* line 65, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.opening-panel h1, .opening-panel h2, .opening-panel h3, .opening-panel h4, .opening-panel h5, .opening-panel h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+/* line 67, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.opening-panel h1.subheader, .opening-panel h2.subheader, .opening-panel h3.subheader, .opening-panel h4.subheader, .opening-panel h5.subheader, .opening-panel h6.subheader {
+  line-height: 1.4;
 }
 
-/* line 57, ../scss/app.scss */
+/* line 58, ../scss/app.scss */
+.closing-footer div {
+  height: 90px;
+  background: #FF7F00;
+}
+
+/* line 63, ../scss/app.scss */
 .custom-panel {
   border-style: solid;
   border-width: 1px;
@@ -9051,7 +9082,7 @@ th.hide-for-touch {
   line-height: 1.4;
 }
 
-/* line 68, ../scss/app.scss */
+/* line 74, ../scss/app.scss */
 .row.full-width {
   width: 100%;
   max-width: 100%;

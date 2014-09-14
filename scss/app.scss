@@ -49,9 +49,15 @@
   background: #C0CFC0;
 }
 
+.opening-panel {
+  @include panel(
+    $bg:#ED8906
+  )
+}
+
 .closing-footer div {
   height: 90px;
-  background: orange;
+  background: #FF7F00;
 }
 
 .custom-panel {
