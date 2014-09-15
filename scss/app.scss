@@ -51,7 +51,15 @@
 
 .opening-panel {
   @include panel(
-    $bg:#ED8906
+    $bg:#ED8906,
+    $padding:0px
+  )
+}
+
+.emoticell-panel {
+  @include panel(
+    $bg:black,
+    $padding:0px
   )
 }
 
