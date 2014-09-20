@@ -2336,14 +2336,14 @@ button, .button {
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
   font-size: 1rem;
-  background-color: #ED8906;
-  border-color: #be6e05;
+  background-color: blue;
+  border-color: #0000cc;
   color: #FFFFFF;
   transition: background-color 300ms ease-out;
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #be6e05;
+  background-color: #0000cc;
 }
 /* line 167, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -2469,8 +2469,8 @@ button.round, .button.round {
 }
 /* line 241, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #ED8906;
-  border-color: #be6e05;
+  background-color: blue;
+  border-color: #0000cc;
   color: #FFFFFF;
   cursor: default;
   opacity: 0.7;
@@ -2478,7 +2478,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #be6e05;
+  background-color: #0000cc;
 }
 /* line 167, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -2486,7 +2486,7 @@ button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[dis
 }
 /* line 178, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #ED8906;
+  background-color: blue;
 }
 /* line 242, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -9002,19 +9002,53 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 42, ../scss/app.scss */
+/* line 43, ../scss/app.scss */
+.custom-button-class {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: blue;
+  border-color: #0000cc;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+}
+/* line 161, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+.custom-button-class:hover, .custom-button-class:focus {
+  background-color: #0000cc;
+}
+/* line 167, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+.custom-button-class:hover, .custom-button-class:focus {
+  color: #FFFFFF;
+}
+
+/* line 50, ../scss/app.scss */
 .fw {
   max-width: 100%;
 }
 
-/* line 46, ../scss/app.scss */
+/* line 54, ../scss/app.scss */
 .footer div {
   border-right: 2px solid white;
   height: 90px;
   background: #C0CFC0;
 }
 
-/* line 52, ../scss/app.scss */
+/* line 60, ../scss/app.scss */
 .opening-panel {
   border-style: solid;
   border-width: 1px;
@@ -9045,7 +9079,7 @@ th.hide-for-touch {
   line-height: 1.4;
 }
 
-/* line 59, ../scss/app.scss */
+/* line 67, ../scss/app.scss */
 .emoticell-panel {
   border-style: solid;
   border-width: 1px;
@@ -9076,13 +9110,13 @@ th.hide-for-touch {
   line-height: 1.4;
 }
 
-/* line 66, ../scss/app.scss */
+/* line 74, ../scss/app.scss */
 .closing-footer div {
   height: 90px;
   background: #FF7F00;
 }
 
-/* line 71, ../scss/app.scss */
+/* line 79, ../scss/app.scss */
 .custom-panel {
   border-style: solid;
   border-width: 1px;
@@ -9113,7 +9147,7 @@ th.hide-for-touch {
   line-height: 1.4;
 }
 
-/* line 82, ../scss/app.scss */
+/* line 90, ../scss/app.scss */
 .row.full-width {
   width: 100%;
   max-width: 100%;

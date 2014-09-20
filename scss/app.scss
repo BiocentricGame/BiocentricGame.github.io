@@ -39,6 +39,14 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+
+.custom-button-class {
+  @include button(
+    // Primary color set in settings file. Default: $primary-color.
+    $bg: blue
+  );
+}
+
 .fw {
   max-width: 100%;
 }
