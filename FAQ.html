@@ -51,12 +51,143 @@
 
 			<div class="large-12 columns">
 				<h1>FAQ</h1>
+				<h3>What exactly the number ‘4E6’ represent?</h3>
+				<p>
+					In the Strength's graph the value of 4E6 (in scientific notation) is an historical reference at the certainty of the Boson.
+					The Strength's graph represents the Fisher meta-analysis, for artistic reasons it displays the inverse value of the result of the calculation.
+					So the value of 4E6 is corresponding to a Fisher of 0,00000025.
+					<br>
+					At the beginning (1925) of the science of "statistical hypothesis testing", Fisher suggested the value of 0.05 as a significant level.
+					Despite his initial suggestion of 0.05 as a significance level, Fisher did not intend this cutoff value to be fixed.
+					In fact during the years the level has changed many times, furthermore it is different depending on the field of study.
+					<br>
+					For the 'statistical test suite' of the National Institute for Standards and Technologies (the methods used inside Biocentric Game), the level of statistical significance of non randomness is 1% (0,01).
+					In social sciences today the optimum level is fixed at 0.001.
+					It is to be noted that lower values are more significant and harder to obtain.
+					<br>
+					In specific fields such as particle physics and manufacturing, statistical significance is often expressed in multiples of the standard
+					deviation or sigma (σ) of a normal distribution, with significance thresholds set at a much stricter level (e.g. 5σ).
+					For instance, the certainty of the Higgs boson particle's existence was based on the 5σ criterion, which corresponds to a
+					p-value of about 1 in 3.5 million, that in decimal notation is corresponding to 0,000000285714285714286.
+					<br>
+					In the simulation, when the Strength's graph reaches a level that is equal or more significant than the Boson's certainty, it always shows the same fixed label '4E6'.
+					<br>
+					At the end of the game, do we need more certainty than physicists?
+				</p>
+				<p>
+					For more information on statistical significance visit: <a href="http://en.wikipedia.org/wiki/Statistical_significance">http://en.wikipedia.org/wiki/Statistical_significance</a>
+				</p>
+				<h3>I see many labels ‘4E6’, but the values are at very different heights, what does it means?</h3>
+				<p>
+					For the reason explained above, in the Strength's graph the maximum value displayed in scientific notation is 4E6.
+					<br>
+					So when the graph displays more than one label '4E6', the ones positioned on the Y axis at higher heights are far more significant than
+					a Fisher of 0,00000025, taking into account also the fact that the Y scale is logarithmic.
+				</p>
+				<h3>How can I know the exact value of the Fisher that has been obtained?</h3>
+				<p>
+					Biocentric Game can store complete information, either of games or blind-checks, using your Dropbox account (if you don't already have one you can create it for free).
+					You can link the App to your Dropbox account from the main menu.
+					After you have done this, you will obtain a file containing complete information for every run of the simulation (in JSON format).
+					<br>
+					The information include every bits of every sequences, with the relative statistical analysis performed with the 'statistical test suite' of the NIST, plus the values
+					obtained by the meta-analysis.
+					You can access the Dropbox folder on any desktop computer that you have linked to your Dropbox account.
+				</p>
+				<p>
+					For more information on the 'statistical test suite' visit: <a href="http://csrc.nist.gov/groups/ST/toolkit/rng/documentation_software.html">http://csrc.nist.gov/groups/ST/toolkit/rng/documentation_software.html</a>
+					<br>
+					For more information on the Dropbox service visit: <a href="https://www.dropbox.com">https://www.dropbox.com</a>
+				</p>
+				<h3>How is the average computed in the graphs?</h3>
+				<p>
+					During the simulation it is processed a random sequence of 128 bits every 0.25 seconds.
+					It is to be noted that this frequency (a sequence every 0.25 seconds) can vary depending on the conditions of the network connections, and in many cases it is lower.
+					For example a two minutes game, in optimal conditions, might process up to 480 sequences.
+					<br>
+					This quantity of values is too great in order to be displayed in a graph visualized on a smartphone or on a tablet.
+					As a consequence for the graphs only a subset of the received values is considered, up to a maximum of 150.
+					<br>
+					This quantity of 150 has been chosen upon testing, and its purpose is only to produce decorative graphs.
+					The average displayed on top of the graphs is calculated on the subset, and again its purpose is merely decorative.
+					<br>
+					It might appear to you that the value of the average that has been calculated is too low, but you must remember that the
+					Y axis is on a logarithmic scale, and typically the initial values of 'Strength' are very very low.
+					<br>
+					If you need to analyse in a scientific manner the results you can use the Dropbox functionality as explained above.
+				</p>
+				<h3>How is the 'Strength' correlated to the game engine?</h3>
+				<p>
+					Actually the 'Strength' is not directly correlated to the game engine.
+					<br>
+					In Biocentric Game the quantity of 'Coherence' is determined by two statistical measurements.
+					The p-value of every single sequence increases the quantity of 'Coherence', meanwhile the cumulative effect size
+					(of all the sequences computed up to the current one) determines of long the 'Coherence' will last, its tenacity.
+					<br>
+					The 'Strength' is merely informative in respect to the gameplay, but in scientific terms it means how far from the randomness you have gone.
+				</p>
+				<h3>Why is so much harder to win at higher levels of 'Frequency'?</h3>
+				<p>
+					When you raise the 'Frequency' in the game settings, you are determining the fact that inside the game much more sequences will be discarded and will not increase the 'Coherence'.
+					If you choose a level of 20, only sequences with a p-value lower than 0.05 (more significant) will increase the 'Coherence'.
+					<br>
+					Instead if you choose a level of 50, the 'Coherence' will increase only when you receive a sequence with a p-value lower than 0.02 (it is 1/50).
+					<br>
+					Obviously in this second case you should expect to have much less advantages in the game.
+				</p>
+				<h3>I understand, but I still think that it is too hard to win with an higher 'Frequency'.</h3>
+				<p>
+					In fact when you raise the 'Frequency' you may notice that the Strength's graph produces very lower values.
+					This is an unexpected result that is probably shown for the first time.
+					<br>
+					During the development phase there were many problems when trying to fine-tune the difficulty levels of the game, because
+					it was always becoming too much difficult too rapidly.
+					<br>
+					Then it arose the idea of adding the calculation of the Fisher, to try to identify the problem.
+					<br>
+					At that point, with great surprise, it was shown that the problem was not inside the game engine.
+					To say it in simple words, when you raise the 'Frequency' the source of entropy is collaborating with you, returning towards the randomness and making the game even harder.
+				</p>
+				<h3>How do you explain that the source of entropy is collaborating to the game?</h3>
+				<p>
+					I'm looking for the explanation, together with my partners, because we really need to win a Nobel prize.
+					<br>
+					In the meantime, it can be said that probably it is the new approach that has been adopted is at the origin of some unexpected results.
+					This new approach consists in the fact that, for the first time in this kind of experiments, the operator has a choice of determining his
+					own level of judgement of the statistical results.
+					<br>
+					In the past instead these tests were always performed by initially fixing the levels, typically 0.05 for the significance and 0.2 for the effect size.
+					<br>
+					Let's say, as an hypothesis, that the freedom of choice leverages the 'conscious observer'.
+					<br>
+					And it appears that there is a difference among the 'traditional observer' (i.e. the 'Double Slit' experiment) and the 'conscious observer'.
+				</p>
+				<h3>Are you really saying that the human consciousness is influencing the randomness?</h3>
+				<p>
+					By a scientific standpoint, Biocentric Game is showing that a random number generator is skewed when you play the game, meanwhile it is functioning
+					normally when you run the blind check.
+					<br>
+					This is it.
+					<br>
+					If you like the idea that the human consciousness is influencing the source, you have a good argument that is supporting your hypothesis, but please note that this is not a final demonstration.
+				</p>
+				<h3>I'm still not convinced of what’s happening here.</h3>
+				<p>
+					The source code is online at the following link:
+					<br>
+					<a href="https://github.com/BiocentricGame/Biocentric-Game-rel-1.0.1">https://github.com/BiocentricGame/Biocentric-Game-rel-1.0.1</a>
+					<br>
+					Please note that the source code is protected by the copyright's laws, and also that the methods used for correlating the randomness to the gameplay are currently patent pending.<br>
+					Anyway you can freely inspect the code, compile it and run for personal use.
+				</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<hr>
-			<div class="large-12 columns" id="disqus_thread">&nbsp;</div>
+			<div class="large-12 columns" id="disqus_thread">
+				&nbsp;
+			</div>
 			<script type="text/javascript">
 				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 				var disqus_shortname = 'biocentricgame';
