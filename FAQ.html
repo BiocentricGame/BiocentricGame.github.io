@@ -177,8 +177,91 @@
 					<br>
 					<a href="https://github.com/BiocentricGame/Biocentric-Game-rel-1.0.1">https://github.com/BiocentricGame/Biocentric-Game-rel-1.0.1</a>
 					<br>
-					Please note that the source code is protected by the copyright's laws, and also that the methods used for correlating the randomness to the gameplay are currently patent pending.<br>
+					Please note that the source code is protected by the copyright's laws, and also that the methods used for correlating the randomness to the gameplay are currently patent pending.
+					<br>
 					Anyway you can freely inspect the code, compile it and run for personal use.
+				</p>
+				<h3>I can't read the source code, can you explain how the randomness is evaluated?</h3>
+				<p>
+					A sequence is far from the randomness when it is rare, something like a winning ticket in a lottery.
+					We are using sequences of 128 bits, so there are in total 340282366920938000000000000000000000000 possible different sequences (2^128).
+					Now let's take as an example the fundamental 'Monobit' test of the ‘NIST test suite’ (the suite it is the reference in this matter).
+					<br>
+					The Monobit tests the proportion of zeroes and ones for the entire sequence, and its purpose it to determine whether the number of ones and zeros in a
+					sequence are approximately the same as would be expected for a truly random sequence.
+					A couple of extremely rare sequences are '11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'
+					and '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+					because they both appear only once out of the total possible sequences.
+					<br>
+					Their rarity is defined as a number, this number is obtained dividing their frequency of distribution by the total number of possibilities, in our case it is 1/2^128.
+					This number is called the 'p-value', and in our example the p-value of the extremely rare sequences is 2.94E-39, or 0.00000000000000000000000000000000000000293873587705572.
+					<br>
+					Instead a sequence is not rare when the number of zeroes and ones is roughly the same.
+					In this case the p-value will go towards a value of 1, and the sequence is considered truly random.
+					<br>
+					In Biocentric Game the minimum required level of rarity is the 'Frequency' of 20, it means that a sequence is considered far from randomness
+					when it could happen only once out of twenty (its p-value is equal or below 0.05, because it is calculated as 1/20).
+					The challenge is to receive a greater quantity of rare sequences than the quantity normally expected.
+					<br>
+					A two minutes game normally evaluates up to 480 sequences, if you are playing at a  'Frequency' of 20 you normally expect to receive 24 (480/20) valid sequences.
+					<br>
+					And if you receive the quantity normally expected you loose, for sure, no escape.
+					<br>
+					You need to receive a much greater number of valid sequences, you need to bring the random number generator out of the randomness.
+					The NIST test suite includes many more test of randomness, Biocentric Game incorporates many of them, they are detailed in the 'Background' page of this website.
+				</p>
+				<h3>I can't read the source code, what are the rules for calculating the 'Coherence" in the game, explain the 'Frequency' and the 'Strength'?</h3>
+				<p>
+					Let's suppose that you choose a 'Frequency' of 20 at the beginning of a game.
+					With true randomness this should cause about one sequence out of twenty to increase the quantity of 'Coherence', as explained above.
+					<br>
+					Now imagine that you receive a sequence that could happen only once every one hundred times, in Biocentric Game this is defined as its 'Strength'
+					and in this case the value is 100.
+					Because this value is above the 'Frequency' we have the right to increase our 'Coherence', it happens as described in the following.
+					<br>
+					The difference among this 'Strength' and the 'Frequency' is calculated, so we obtain a value of 80 (100 - 20).
+					At this point a logarithmic scale is applied to the found value (2 is the base), and the final result of this calculation is '6.32'.
+					<br>
+					Congratulations you just added 6.32 points to your 'Coherence'!
+					<br>
+					But remember, it will last for long only if you have a good 'Rank'.
+				</p>
+				<h3>What about the 'Amplitude' and the 'Rank' instead?</h3>
+				<p>
+					When you start to playing Biocentric Game you are forced to a single 'Amplitude' of 20, you can go at higher levels only if you win at the maximum 'Frequency' of 128.
+					<br>
+					The 'Amplitude', in our case, is the magnitude of the phenomenon of non-randomness, in statistical terms it is known as the 'effect size',
+					and it is complementary to the statistical hypothesis testing (in our case the tests of non-randomness).
+					To say it in simple terms, the measurement of the effect-size validates further the statistical results obtained in the tests of 'Strength' described above.
+					<br>
+					In Biocentric Game the 'Amplitude' is your choice, your challenge, and the 'Rank' is the reality of what you obtain.
+					You typically need to reach a 'Rank' that is not too lower than the 'Amplitude' in order to win.
+					<br>
+					The manner in which this model is applied to the quantity of the 'Coherence' is similar to the one described above for the 'Frequency' and the 'Strength'.
+					First the difference among the 'Amplitude' chosen and the current 'Rank' is calculated, then a logarithmic scale is
+					applied to the found value, when the ‘Rank’ is below the ‘Amplitude’.
+					<br>
+					This value is a penalisation.
+					<br>
+					The 'Coherence' decreases with the passing of time, if you incur in the penalisation the 'Coherence' decreases even more, you loose it faster.
+					<br>
+					On the contrary if the 'Rank' is above the 'Amplitude' you have a prize, the time passing will not decrease too much the 'Coherence' or even,
+					if your 'Rank' is really high, the 'Coherence' will cease to decrease entirely.
+					In fact when the 'Rank' is above the 'Amplitude' to their difference is applied an exponential scale.
+					<br>
+					In Biocentric Game the calculation of the effect-size is done by using the Glass' Δ method.
+				</p>
+				<h3>Why the random number generators should be actually random?</h3>
+				<p>
+					In Biocentric Game you can choose among the local RNG and the ANU Quantum Random Server.
+					Both they should be random because they are a measurement of physical processes with an high level of "entropy" and generally, "entropy" stands for "disorder" or uncertainty.<br>
+					The local RNG on an iPhone is <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1944.pdf">certified by the NIST</a> as being "FIPS 140-2" (compliant for Cryptographic application), and it acquire entropy from all standard inputs 
+					like accelerometers, compass, radio baseband, as well as from certain parts of the circuitry which picks up interference at all levels.
+					This certification is at the core of the security in the forthcoming ApplePay's method of payment.<br>
+					Instead the ANU acquire entropy by measuring the quantum fluctuations of the vacuum, and quantum mechanics predicts that it will be random.
+					On their website, in the <a href="http://qrng.anu.edu.au/FAQ.php">FAQ section</a>, it is written:<br>
+					"If we can find some patterns in the numbers then physicist would have to work on a better theory to explain what is going on.”<br>
+					I love physicists, and I hope they are going to have very interesting times.
 				</p>
 			</div>
 		</div>
