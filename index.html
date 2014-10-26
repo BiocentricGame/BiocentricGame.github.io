@@ -26,6 +26,17 @@
 			ga('send', 'pageview');
 
 		</script>
+
+		<script>
+			var trackOutboundLink = function(url) {
+				ga('send', 'event', 'outbound', 'click', url, {
+					'hitCallback' : function() {
+						document.location = url;
+					}
+				});
+			}
+		</script>
+
 	</head>
 	<body>
 
@@ -87,8 +98,9 @@
 				</li>
 				<li>
 					<p class="text-center">
-						<a href="https://itunes.apple.com/app/biocentric-game/id896593868?ls=1&mt=8" onclick="_gaq.push(['_trackEvent', 'AppStore', 'clicked'])">
-							<img src="img/Biocentric-Game-Download_on_the_App_Store_Badge_US-UK_199x59.png"/></a>
+						<a href="https://itunes.apple.com/app/biocentric-game/id896593868?ls=1&mt=8"
+						onclick='trackOutboundLink("https://itunes.apple.com/app/biocentric-game/id896593868?ls=1&mt=8"); return false;'> 
+						<img src="img/Biocentric-Game-Download_on_the_App_Store_Badge_US-UK_199x59.png"/></a>
 					</p>
 					<blockquote>
 						<h3>Biocentric Game is the first game in AppStore that replicates groundbreaking experiments of mind-matter interactions
