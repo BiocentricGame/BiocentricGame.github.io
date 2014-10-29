@@ -8,6 +8,25 @@
 		<title>Biocentric Game FAQ</title>
 		<link rel="stylesheet" href="stylesheets/app.css" />
 		<script src="bower_components/modernizr/modernizr.js"></script>
+
+		<script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] ||
+				function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-54776412-1', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+		</script>
+
 	</head>
 	<body>
 
@@ -254,13 +273,17 @@
 				<h3>Why the random number generators should be actually random?</h3>
 				<p>
 					In Biocentric Game you can choose among the local RNG and the ANU Quantum Random Server.
-					Both they should be random because they are a measurement of physical processes with an high level of "entropy" and generally, "entropy" stands for "disorder" or uncertainty.<br>
-					The local RNG on an iPhone is <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1944.pdf">certified by the NIST</a> as being "FIPS 140-2" (compliant for Cryptographic application), and it acquire entropy from all standard inputs 
+					Both they should be random because they are a measurement of physical processes with an high level of "entropy" and generally, "entropy" stands for "disorder" or uncertainty.
+					<br>
+					The local RNG on an iPhone is <a href="http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140sp/140sp1944.pdf">certified by the NIST</a> as being "FIPS 140-2" (compliant for Cryptographic application), and it acquire entropy from all standard inputs
 					like accelerometers, compass, radio baseband, as well as from certain parts of the circuitry which picks up interference at all levels.
-					This certification is at the core of the security in the forthcoming ApplePay's method of payment.<br>
+					This certification is at the core of the security in the forthcoming ApplePay's method of payment.
+					<br>
 					Instead the ANU acquire entropy by measuring the quantum fluctuations of the vacuum, and quantum mechanics predicts that it will be random.
-					On their website, in the <a href="http://qrng.anu.edu.au/FAQ.php">FAQ section</a>, it is written:<br>
-					"If we can find some patterns in the numbers then physicist would have to work on a better theory to explain what is going on.”<br>
+					On their website, in the <a href="http://qrng.anu.edu.au/FAQ.php">FAQ section</a>, it is written:
+					<br>
+					"If we can find some patterns in the numbers then physicist would have to work on a better theory to explain what is going on.”
+					<br>
 					I love physicists, and I hope they are going to have very interesting times.
 				</p>
 			</div>
@@ -327,23 +350,6 @@
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/foundation/js/foundation.min.js"></script>
 		<script src="js/app.js"></script>
-
-		<script>
-			(function(i, s, o, g, r, a, m) {
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] ||
-				function() {
-					(i[r].q = i[r].q || []).push(arguments);
-				}, i[r].l = 1 * new Date();
-				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m);
-			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-			ga('create', 'UA-54776412-1', 'auto');
-			ga('send', 'pageview');
-		</script>
 
 		<script type="text/javascript">
 			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
